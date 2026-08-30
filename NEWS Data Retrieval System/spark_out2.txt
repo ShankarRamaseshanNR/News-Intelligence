@@ -1,0 +1,222 @@
+﻿python.exe : INFO: 
+Initialising SparkSession 
+(local[*] mode)...
+At line:1 char:196
++ ... ython.exe"; & 
+"d:\MIT Notes\NEWS - Copy\
+.venv\Scripts\python.exe" 
+-m  ...
++                 ~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (I  
+  NFO: Initialis...cal[   
+ *] mode)...:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+The system cannot find 
+the path specified.
+Missing Python executable 'd:\MIT Notes\NEWS - Copy\.venv\Scripts\python.exe', defaulting to 'D:\MIT Notes\NEWS - Copy\.venv\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+26/04/04 12:32:05 WARN 
+Shell: Did not find 
+winutils.exe: java.io.File
+NotFoundException: java.io
+.FileNotFoundException: 
+HADOOP_HOME and 
+hadoop.home.dir are 
+unset. -see https://wiki.a
+pache.org/hadoop/WindowsPr
+oblems
+Setting default log level 
+to "WARN".
+To adjust logging level 
+use 
+sc.setLogLevel(newLevel). 
+For SparkR, use 
+setLogLevel(newLevel).
+26/04/04 12:32:05 WARN 
+NativeCodeLoader: Unable 
+to load native-hadoop 
+library for your 
+platform... using 
+builtin-java classes 
+where applicable
+INFO: SparkSession ready.
+INFO: Exported 83 rows to 
+temp CSV: C:\Users\SHANKA~
+1\AppData\Local\Temp\tmp1i
+z7f2oh\articles.csv
+INFO: Spark temp view 
+'articles' ready. Running 
+SQL aggregations...
+INFO: Analytics job 
+complete: 83 articles 
+processed via Spark SQL.
+INFO: Stopping 
+SparkSession...
+INFO: Closing down 
+clientserver connection
+{
+  "total_articles": 83,
+  "categories": [
+    {
+      "category": "top",
+      "count": 29
+    },
+    {
+      "category": "business",
+      "count": 19
+    },
+    {
+      "category": "technology",
+      "count": 10
+    },
+    {
+      "category": "sports",
+      "count": 6
+    },
+    {
+      "category": "science",
+      "count": 6
+    },
+    {
+      "category": "politics",
+      "count": 5
+    },
+    {
+      "category": "health",
+      "count": 3
+    },
+    {
+      "category": "crime",
+      "count": 1
+    },
+    {
+      "category": "entertainment",
+      "count": 1
+    },
+    {
+      "category": "tourism",
+      "count": 1
+    },
+    {
+      "category": "world",
+      "count": 1
+    },
+    {
+      "category": "lifestyle",
+      "count": 1
+    }
+  ],
+  "sentiment_distribution": {
+    "positive": 29,
+    "negative": 12,
+    "neutral": 42
+  },
+  "top_sources": [
+    {
+      "source": "Phys.org",
+      "count": 3
+    },
+    {
+      "source": "Headtopics",
+      "count": 3
+    },
+    {
+      "source": "Pr Newswire",
+      "count": 2
+    },
+    {
+      "source": "Cornell Chronicle",
+      "count": 2
+    },
+    {
+      "source": "Nwaonline",
+      "count": 2
+    },
+    {
+      "source": "Medical Xpress",
+      "count": 2
+    },
+    {
+      "source": "Southernminn",
+      "count": 2
+    },
+    {
+      "source": "Plato Data Intelligence",
+      "count": 2
+    },
+    {
+      "source": "The Chronicle",
+      "count": 1
+    },
+    {
+      "source": "Mtairynews",
+      "count": 1
+    }
+  ],
+  "daily_trend": [
+    {
+      "date": "2026-03-31",
+      "count": 83
+    }
+  ],
+  "avg_content_length_by_category": [
+    {
+      "category": "top",
+      "avg_length": 28.0
+    },
+    {
+      "category": "crime",
+      "avg_length": 28.0
+    },
+    {
+      "category": "entertainment",
+      "avg_length": 28.0
+    },
+    {
+      "category": "sports",
+      "avg_length": 28.0
+    },
+    {
+      "category": "health",
+      "avg_length": 28.0
+    },
+    {
+      "category": "technology",
+      "avg_length": 28.0
+    },
+    {
+      "category": "tourism",
+      "avg_length": 28.0
+    },
+    {
+      "category": "business",
+      "avg_length": 28.0
+    },
+    {
+      "category": "world",
+      "avg_length": 28.0
+    },
+    {
+      "category": "science",
+      "avg_length": 28.0
+    },
+    {
+      "category": "lifestyle",
+      "avg_length": 28.0
+    },
+    {
+      "category": "politics",
+      "avg_length": 28.0
+    }
+  ],
+  "spark_mode": "local[*]"
+}
+SUCCESS: The process with PID 6596 (child process of PID 6992) has been terminated.
+SUCCESS: The process with PID 6992 (child process of PID 15724) has been terminated.
+SUCCESS: The process with PID 15724 (child process of PID 11484) has been terminated.

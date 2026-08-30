@@ -1,0 +1,15 @@
+INFO:     Started server process [14212]
+INFO:     Waiting for application startup.
+2026-04-07 13:13:10,755 - main - INFO - Starting News RAG System...
+2026-04-07 13:13:10,759 - main - INFO - Database initialized
+2026-04-07 13:13:10,760 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-04-07 13:13:10,760 - apscheduler.scheduler - INFO - Added job "_run_ingestion_sync" to job store "default"
+2026-04-07 13:13:10,760 - apscheduler.scheduler - INFO - Scheduler started
+2026-04-07 13:13:10,760 - ingestion.scheduler - INFO - Scheduler started - fetching every 15 minutes
+2026-04-07 13:13:10,760 - main - INFO - Scheduler started
+INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8000): [winerror 10048] only one usage of each socket address (protocol/network address/port) is normally permitted
+INFO:     Waiting for application shutdown.
+2026-04-07 13:13:10,763 - apscheduler.scheduler - INFO - Scheduler has been shut down
+2026-04-07 13:13:10,763 - main - INFO - Shutdown complete
+INFO:     Application shutdown complete.

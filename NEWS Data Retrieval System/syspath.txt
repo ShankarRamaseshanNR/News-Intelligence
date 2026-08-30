@@ -1,0 +1,7 @@
+
+C:\Users\Shankar Ramaseshan\AppData\Local\Python\pythoncore-3.14-64\python314.zip
+C:\Users\Shankar Ramaseshan\AppData\Local\Python\pythoncore-3.14-64\DLLs
+C:\Users\Shankar Ramaseshan\AppData\Local\Python\pythoncore-3.14-64\Lib
+C:\Users\Shankar Ramaseshan\AppData\Local\Python\pythoncore-3.14-64
+D:\MIT Notes\NEWS - Copy\.venv
+D:\MIT Notes\NEWS - Copy\.venv\Lib\site-packages

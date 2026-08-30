@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="News Intelligence RAG System — AI-powered news retrieval, analysis, and chat using Retrieval-Augmented Generation">
+  <title>News Intelligence | RAG System</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Mobile Toggle -->
+  <button id="mobile-toggle" class="mobile-toggle">☰</button>
+
+  <div class="app-layout">
+
+    <!-- ─── Sidebar ─── -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <h1>🧠 News Intelligence</h1>
+        <p>RAG-Powered Analysis</p>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-section="dashboard">
+          <span class="icon">📊</span>
+          <span>Dashboard</span>
+        </div>
+        <div class="nav-item" data-section="news">
+          <span class="icon">📰</span>
+          <span>News Feed</span>
+        </div>
+        <div class="nav-item" data-section="search">
+          <span class="icon">🔍</span>
+          <span>Semantic Search</span>
+        </div>
+        <div class="nav-item" data-section="chat">
+          <span class="icon">💬</span>
+          <span>AI Chat</span>
+        </div>
+        <div class="nav-item" data-section="analytics">
+          <span class="icon">📈</span>
+          <span>Analytics</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-status">
+        <span class="status-dot"></span>
+        <span id="status-text">Connecting...</span>
+      </div>
+    </aside>
+
+    <!-- ─── Main ─── -->
+    <main class="main-content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h2 id="page-title">Dashboard</h2>
+        <p id="page-subtitle">Overview of your news intelligence system</p>
+      </div>
+
+      <div class="page-body">
+
+        <!-- ═══ Dashboard Section ═══ -->
+        <div id="section-dashboard" class="section active">
+          <div id="dashboard-stats" class="stats-grid">
+            <div class="stat-card accent">
+              <div class="stat-icon">📰</div>
+              <div class="stat-value">—</div>
+              <div class="stat-label">Total Articles</div>
+            </div>
+            <div class="stat-card success">
+              <div class="stat-icon">🗂️</div>
+              <div class="stat-value">—</div>
+              <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card warning">
+              <div class="stat-icon">🔗</div>
+              <div class="stat-value">—</div>
+              <div class="stat-label">Sources</div>
+            </div>
+            <div class="stat-card info">
+              <div class="stat-icon">🧠</div>
+              <div class="stat-value">—</div>
+              <div class="stat-label">Analyzed</div>
+            </div>
+          </div>
+          <div id="dashboard-charts"></div>
+        </div>
+
+        <!-- ═══ News Feed Section ═══ -->
+        <div id="section-news" class="section">
+          <div class="fetch-controls">
+            <select id="fetch-category" class="input">
+              <option value="">All Categories</option>
+              <option value="top">Top</option>
+              <option value="technology">Technology</option>
+              <option value="science">Science</option>
+              <option value="business">Business</option>
+              <option value="health">Health</option>
+              <option value="politics">Politics</option>
+              <option value="sports">Sports</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="world">World</option>
+            </select>
+            <button id="btn-fetch-news" class="btn btn-primary">⚡ Fetch News</button>
+
+            <span style="flex: 1;"></span>
+
+            <select id="filter-category" class="input" onchange="loadArticles()">
+              <option value="">Filter: All</option>
+              <option value="top">Top</option>
+              <option value="technology">Technology</option>
+              <option value="science">Science</option>
+              <option value="business">Business</option>
+              <option value="health">Health</option>
+              <option value="politics">Politics</option>
+              <option value="sports">Sports</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="world">World</option>
+            </select>
+          </div>
+
+          <div id="articles-grid" class="articles-grid">
+            <div class="empty-state" style="grid-column: 1/-1;">
+              <div class="icon">📭</div>
+              <h3>No Articles Yet</h3>
+              <p>Click "Fetch News" above to pull in the latest articles.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ Search Section ═══ -->
+        <div id="section-search" class="section">
+          <div class="card" style="margin-bottom: 22px;">
+            <div class="card-body">
+              <div class="input-group">
+                <input id="search-input" class="input" type="text" placeholder="Search for news topics, events, or facts..." />
+                <select id="search-category" class="input" style="max-width: 160px;">
+                  <option value="">All Categories</option>
+                  <option value="technology">Technology</option>
+                  <option value="science">Science</option>
+                  <option value="business">Business</option>
+                  <option value="health">Health</option>
+                  <option value="politics">Politics</option>
+                  <option value="sports">Sports</option>
+                </select>
+                <button id="btn-search" class="btn btn-primary">🔍 Search</button>
+              </div>
+            </div>
+          </div>
+
+          <div id="search-results" class="search-results">
+            <div class="empty-state">
+              <div class="icon">🔮</div>
+              <h3>AI-Powered Semantic Search</h3>
+              <p>Search doesn't just match keywords — it understands meaning. Try queries like "latest breakthroughs in AI" or "global economic outlook".</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ Chat Section ═══ -->
+        <div id="section-chat" class="section">
+          <div class="chat-container">
+            <div id="chat-messages" class="chat-messages">
+              <div class="welcome-msg">
+                <div class="icon">💬</div>
+                <h3>Ask me about the news</h3>
+                <p>I can answer questions about current events using the articles in the database. I'll cite my sources so you can verify the information.</p>
+                <div class="suggestions">
+                  <span class="suggestion-chip">What's happening in technology?</span>
+                  <span class="suggestion-chip">Summarize today's top news</span>
+                  <span class="suggestion-chip">Any breakthroughs in science?</span>
+                  <span class="suggestion-chip">Latest business trends</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="chat-input-area">
+              <input id="chat-input" class="input" type="text" placeholder="Ask about current news events..." />
+              <button id="btn-send-chat" class="btn btn-primary">Send ➤</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ Analytics Section ═══ -->
+        <div id="section-analytics" class="section">
+          <div id="analytics-content">
+            <div class="empty-state">
+              <div class="icon">📊</div>
+              <h3>Loading Analytics...</h3>
+              <p>Crunching the numbers from your news database.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

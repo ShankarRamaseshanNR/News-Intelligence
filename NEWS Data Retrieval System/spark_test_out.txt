@@ -1,0 +1,3223 @@
+﻿python.exe : INFO: 
+Initialising SparkSession 
+(local[*] mode)...
+At line:1 char:278
++ ... ython.exe"; & 
+"d:\MIT Notes\NEWS - Copy\
+.venv\Scripts\python.exe" 
+-m  ...
++                 ~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo        
+      : NotSpecified: (I  
+  NFO: Initialis...cal[   
+ *] mode)...:String) [    
+], RemoteException
+    + FullyQualifiedError 
+   Id : NativeCommandErr  
+  or
+ 
+The system cannot find 
+the path specified.
+Missing Python executable 'd:\MIT Notes\NEWS - Copy\.venv\Scripts\python.exe', defaulting to 'D:\MIT Notes\NEWS - Copy\.venv\Lib\site-packages\pyspark\bin\..' for SPARK_HOME environment variable. Please install Python or specify the correct Python executable in PYSPARK_DRIVER_PYTHON or PYSPARK_PYTHON environment variable to detect SPARK_HOME safely.
+WARNING: Using incubator 
+modules: 
+jdk.incubator.vector
+26/04/04 12:22:27 WARN 
+Shell: Did not find 
+winutils.exe: java.io.File
+NotFoundException: java.io
+.FileNotFoundException: 
+HADOOP_HOME and 
+hadoop.home.dir are 
+unset. -see https://cwiki.
+apache.org/confluence/disp
+lay/HADOOP2/WindowsProblem
+s
+Using Spark's default 
+log4j profile: org/apache/
+spark/log4j2-defaults.prop
+erties
+Setting default log level 
+to "WARN".
+To adjust logging level 
+use 
+sc.setLogLevel(newLevel). 
+For SparkR, use 
+setLogLevel(newLevel).
+26/04/04 12:22:27 WARN 
+NativeCodeLoader: Unable 
+to load native-hadoop 
+library for your 
+platform... using 
+builtin-java classes 
+where applicable
+INFO: SparkSession ready.
+INFO: Reading articles 
+from SQLite: D:\MIT 
+Notes\NEWS - 
+Copy\backend\news.db
+INFO: Loaded 83 articles 
+into Pandas; converting 
+to Spark DataFrame...
+Exception ignored while 
+finalizing file 
+<_io.BufferedRWPair 
+object at 
+0x000001DA54C6BBC0>:
+Traceback (most recent 
+call last):
+  File "C:\Users\Shankar R
+amaseshan\AppData\Local\Py
+thon\pythoncore-3.14-64\Li
+b\socket.py", line 743, 
+in write
+OSError: [WinError 10038] 
+An operation was 
+attempted on something 
+that is not a socket
+26/04/04 12:22:32 ERROR 
+Executor: Exception in 
+task 0.0 in stage 0.0 
+(TID 0)
+org.apache.spark.SparkExce
+ption: Python worker 
+exited unexpectedly 
+(crashed). Consider 
+setting 'spark.sql.executi
+on.pyspark.udf.faulthandle
+r.enabled' or'spark.python
+.worker.faulthandler.enabl
+ed' configuration to 
+'true' for the better 
+Python traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+26/04/04 12:22:32 ERROR 
+TaskSetManager: Task 0 in 
+stage 0.0 failed 1 times; 
+aborting job
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+3.0 in stage 0.0 (TID 3) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+9.0 in stage 0.0 (TID 9) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+1.0 in stage 0.0 (TID 1) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+7.0 in stage 0.0 (TID 7) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+2.0 in stage 0.0 (TID 2) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+4.0 in stage 0.0 (TID 4) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+8.0 in stage 0.0 (TID 8) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+5.0 in stage 0.0 (TID 5) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+15.0 in stage 0.0 (TID 
+15) (LAPTOP-MF2M88GC 
+executor driver): 
+TaskKilled (Stage 
+cancelled: Job aborted 
+due to stage failure: 
+Task 0 in stage 0.0 
+failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+6.0 in stage 0.0 (TID 6) 
+(LAPTOP-MF2M88GC executor 
+driver): TaskKilled 
+(Stage cancelled: Job 
+aborted due to stage 
+failure: Task 0 in stage 
+0.0 failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+12.0 in stage 0.0 (TID 
+12) (LAPTOP-MF2M88GC 
+executor driver): 
+TaskKilled (Stage 
+cancelled: Job aborted 
+due to stage failure: 
+Task 0 in stage 0.0 
+failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+14.0 in stage 0.0 (TID 
+14) (LAPTOP-MF2M88GC 
+executor driver): 
+TaskKilled (Stage 
+cancelled: Job aborted 
+due to stage failure: 
+Task 0 in stage 0.0 
+failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+13.0 in stage 0.0 (TID 
+13) (LAPTOP-MF2M88GC 
+executor driver): 
+TaskKilled (Stage 
+cancelled: Job aborted 
+due to stage failure: 
+Task 0 in stage 0.0 
+failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+10.0 in stage 0.0 (TID 
+10) (LAPTOP-MF2M88GC 
+executor driver): 
+TaskKilled (Stage 
+cancelled: Job aborted 
+due to stage failure: 
+Task 0 in stage 0.0 
+failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+26/04/04 12:22:32 WARN 
+TaskSetManager: Lost task 
+11.0 in stage 0.0 (TID 
+11) (LAPTOP-MF2M88GC 
+executor driver): 
+TaskKilled (Stage 
+cancelled: Job aborted 
+due to stage failure: 
+Task 0 in stage 0.0 
+failed 1 times, most 
+recent failure: Lost task 
+0.0 in stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+Caused by: 
+java.io.EOFException
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+	... 25 more
+
+Driver stacktrace:)
+Traceback (most recent 
+call last):
+  File "<frozen runpy>", 
+line 198, in 
+_run_module_as_main
+  File "<frozen runpy>", 
+line 88, in _run_code
+  File "D:\MIT Notes\NEWS 
+- Copy\backend\spark\jobs\
+spark_analytics.py", line 
+138, in <module>
+    result = 
+run_analytics_job()
+  File "D:\MIT Notes\NEWS 
+- Copy\backend\spark\jobs\
+spark_analytics.py", line 
+42, in run_analytics_job
+    df = 
+load_articles_df(spark)
+  File "D:\MIT Notes\NEWS 
+- Copy\backend\spark\db_re
+ader.py", line 93, in 
+load_articles_df
+    logger.info(f"Spark 
+DataFrame created with 
+{sdf.count()} rows.")
+                          
+                      
+~~~~~~~~~^^
+  File "D:\MIT Notes\NEWS 
+- Copy\.venv\Lib\site-pack
+ages\pyspark\sql\classic\d
+ataframe.py", line 439, 
+in count
+    return 
+int(self._jdf.count())
+               
+~~~~~~~~~~~~~~~^^
+  File "D:\MIT Notes\NEWS 
+- Copy\.venv\Lib\site-pack
+ages\py4j\java_gateway.py"
+, line 1362, in __call__
+    return_value = 
+get_return_value(
+        answer, 
+self.gateway_client, 
+self.target_id, self.name)
+  File "D:\MIT Notes\NEWS 
+- Copy\.venv\Lib\site-pack
+ages\pyspark\errors\except
+ions\captured.py", line 
+263, in deco
+    return f(*a, **kw)
+  File "D:\MIT Notes\NEWS 
+- Copy\.venv\Lib\site-pack
+ages\py4j\protocol.py", 
+line 327, in 
+get_return_value
+    raise Py4JJavaError(
+        "An error 
+occurred while calling 
+{0}{1}{2}.\n".
+        format(target_id, 
+".", name), value)
+py4j.protocol.Py4JJavaErro
+r: An error occurred 
+while calling o51.count.
+: org.apache.spark.SparkEx
+ception: Job aborted due 
+to stage failure: Task 0 
+in stage 0.0 failed 1 
+times, most recent 
+failure: Lost task 0.0 in 
+stage 0.0 (TID 0) 
+(LAPTOP-MF2M88GC executor 
+driver): org.apache.spark.
+SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+
+Caused by: 
+java.io.EOFException
+
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+
+	... 25 more
+
+
+Driver stacktrace:
+
+	at org.apache.spark.sched
+uler.DAGScheduler.$anonfun
+$abortStage$3(DAGScheduler
+.scala:3122)
+
+	at scala.Option.getOrElse
+(Option.scala:201)
+
+	at org.apache.spark.sched
+uler.DAGScheduler.$anonfun
+$abortStage$2(DAGScheduler
+.scala:3122)
+
+	at org.apache.spark.sched
+uler.DAGScheduler.$anonfun
+$abortStage$2$adapted(DAGS
+cheduler.scala:3114)
+
+	at scala.collection.immut
+able.List.foreach(List.sca
+la:323)
+
+	at org.apache.spark.sched
+uler.DAGScheduler.abortSta
+ge(DAGScheduler.scala:3114
+)
+
+	at org.apache.spark.sched
+uler.DAGScheduler.$anonfun
+$handleTaskSetFailed$1(DAG
+Scheduler.scala:1303)
+
+	at org.apache.spark.sched
+uler.DAGScheduler.$anonfun
+$handleTaskSetFailed$1$ada
+pted(DAGScheduler.scala:13
+03)
+
+	at scala.Option.foreach(O
+ption.scala:437)
+
+	at org.apache.spark.sched
+uler.DAGScheduler.handleTa
+skSetFailed(DAGScheduler.s
+cala:1303)
+
+	at org.apache.spark.sched
+uler.DAGSchedulerEventProc
+essLoop.doOnReceive(DAGSch
+eduler.scala:3397)
+
+	at org.apache.spark.sched
+uler.DAGSchedulerEventProc
+essLoop.onReceive(DAGSched
+uler.scala:3328)
+
+	at org.apache.spark.sched
+uler.DAGSchedulerEventProc
+essLoop.onReceive(DAGSched
+uler.scala:3317)
+
+	at org.apache.spark.util.
+EventLoop$$anon$1.run(Even
+tLoop.scala:50)
+
+Caused by: org.apache.spar
+k.SparkException: Python 
+worker exited 
+unexpectedly (crashed). 
+Consider setting 'spark.sq
+l.execution.pyspark.udf.fa
+ulthandler.enabled' or'spa
+rk.python.worker.faulthand
+ler.enabled' 
+configuration to 'true' 
+for the better Python 
+traceback.
+
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:678)
+
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator$$anonfun$1.app
+lyOrElse(PythonRunner.scal
+a:663)
+
+	at scala.runtime.Abstract
+PartialFunction.apply(Abst
+ractPartialFunction.scala:
+35)
+
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+034)
+
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+014)
+
+	at org.apache.spark.api.p
+ython.BasePythonRunner$Rea
+derIterator.hasNext(Python
+Runner.scala:596)
+
+	at org.apache.spark.Inter
+ruptibleIterator.hasNext(I
+nterruptibleIterator.scala
+:37)
+
+	at scala.collection.Itera
+tor$$anon$10.hasNext(Itera
+tor.scala:611)
+
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.hashAgg_d
+oAggregateWithoutKey_0$(Un
+known Source)
+
+	at org.apache.spark.sql.c
+atalyst.expressions.Genera
+tedClass$GeneratedIterator
+ForCodegenStage1.processNe
+xt(Unknown Source)
+
+	at org.apache.spark.sql.e
+xecution.BufferedRowIterat
+or.hasNext(BufferedRowIter
+ator.java:43)
+
+	at org.apache.spark.sql.e
+xecution.WholeStageCodegen
+EvaluatorFactory$WholeStag
+eCodegenPartitionEvaluator
+$$anon$1.hasNext(WholeStag
+eCodegenEvaluatorFactory.s
+cala:50)
+
+	at scala.collection.Itera
+tor$$anon$9.hasNext(Iterat
+or.scala:593)
+
+	at org.apache.spark.shuff
+le.sort.BypassMergeSortShu
+ffleWriter.write(BypassMer
+geSortShuffleWriter.java:1
+53)
+
+	at org.apache.spark.shuff
+le.ShuffleWriteProcessor.w
+rite(ShuffleWriteProcessor
+.scala:57)
+
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:111
+)
+
+	at org.apache.spark.sched
+uler.ShuffleMapTask.runTas
+k(ShuffleMapTask.scala:54)
+
+	at org.apache.spark.TaskC
+ontext.runTaskWithListener
+s(TaskContext.scala:180)
+
+	at org.apache.spark.sched
+uler.Task.run(Task.scala:1
+47)
+
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.$a
+nonfun$run$5(Executor.scal
+a:716)
+
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally(SparkErrorUtils.s
+cala:86)
+
+	at org.apache.spark.util.
+SparkErrorUtils.tryWithSaf
+eFinally$(SparkErrorUtils.
+scala:83)
+
+	at org.apache.spark.util.
+Utils$.tryWithSafeFinally(
+Utils.scala:97)
+
+	at org.apache.spark.execu
+tor.Executor$TaskRunner.ru
+n(Executor.scala:719)
+
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r.runWorker(ThreadPoolExec
+utor.java:1136)
+
+	at java.base/java.util.co
+ncurrent.ThreadPoolExecuto
+r$Worker.run(ThreadPoolExe
+cutor.java:635)
+
+	at java.base/java.lang.Th
+read.run(Thread.java:840)
+
+Caused by: 
+java.io.EOFException
+
+	at java.base/java.io.Data
+InputStream.readInt(DataIn
+putStream.java:386)
+
+	at org.apache.spark.api.p
+ython.PythonRunner$$anon$3
+.read(PythonRunner.scala:1
+022)
+
+	... 25 more
+
+
+INFO: Closing down 
+clientserver connection
+SUCCESS: The process with PID 4992 (child process of PID 18296) has been terminated.
+SUCCESS: The process with PID 7956 (child process of PID 18296) has been terminated.
+SUCCESS: The process with PID 12964 (child process of PID 10952) has been terminated.
+SUCCESS: The process with PID 12708 (child process of PID 19032) has been terminated.
+SUCCESS: The process with PID 19188 (child process of PID 11992) has been terminated.
+SUCCESS: The process with PID 18428 (child process of PID 10952) has been terminated.
+SUCCESS: The process with PID 17152 (child process of PID 18688) has been terminated.
+SUCCESS: The process with PID 17472 (child process of PID 19032) has been terminated.
+SUCCESS: The process with PID 1632 (child process of PID 18140) has been terminated.
+SUCCESS: The process with PID 18136 (child process of PID 15488) has been terminated.
+SUCCESS: The process with PID 8188 (child process of PID 11992) has been terminated.
+SUCCESS: The process with PID 2944 (child process of PID 18688) has been terminated.
+SUCCESS: The process with PID 5524 (child process of PID 2520) has been terminated.
+SUCCESS: The process with PID 17164 (child process of PID 18140) has been terminated.
+SUCCESS: The process with PID 14480 (child process of PID 11412) has been terminated.
+SUCCESS: The process with PID 17460 (child process of PID 8208) has been terminated.
+SUCCESS: The process with PID 17704 (child process of PID 15488) has been terminated.
+SUCCESS: The process with PID 2364 (child process of PID 2520) has been terminated.
+SUCCESS: The process with PID 11536 (child process of PID 17468) has been terminated.
+SUCCESS: The process with PID 15600 (child process of PID 11412) has been terminated.
+SUCCESS: The process with PID 18944 (child process of PID 7064) has been terminated.
+SUCCESS: The process with PID 18800 (child process of PID 8208) has been terminated.
+SUCCESS: The process with PID 17508 (child process of PID 5932) has been terminated.
+SUCCESS: The process with PID 11340 (child process of PID 17468) has been terminated.
+SUCCESS: The process with PID 8832 (child process of PID 13356) has been terminated.
+SUCCESS: The process with PID 10580 (child process of PID 14136) has been terminated.
+SUCCESS: The process with PID 12724 (child process of PID 7064) has been terminated.
+SUCCESS: The process with PID 2404 (child process of PID 5932) has been terminated.
+SUCCESS: The process with PID 18348 (child process of PID 14136) has been terminated.
+SUCCESS: The process with PID 14140 (child process of PID 13356) has been terminated.
+ERROR: The process with 
+PID 18296 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 10952 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 19032 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 11992 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 18688 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 18140 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 15488 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 2520 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 11412 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+ERROR: The process with 
+PID 8208 (child process 
+of PID 13056) could not 
+be terminated.
+Reason: There is no 
+running instance of the 
+task.
+
+SUCCESS: The process with PID 17468 (child process of PID 13056) has been terminated.
+SUCCESS: The process with PID 7064 (child process of PID 13056) has been terminated.
+SUCCESS: The process with PID 5932 (child process of PID 13056) has been terminated.
+SUCCESS: The process with PID 13356 (child process of PID 13056) has been terminated.
+SUCCESS: The process with PID 14136 (child process of PID 13056) has been terminated.
+SUCCESS: The process with PID 13056 (child process of PID 2864) has been terminated.
+SUCCESS: The process with PID 2864 (child process of PID 2460) has been terminated.
+SUCCESS: The process with PID 2460 (child process of PID 18524) has been terminated.
